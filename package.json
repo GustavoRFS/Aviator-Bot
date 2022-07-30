@@ -1,0 +1,28 @@
+{
+  "name": "aviator-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoRFS/Aviator-Bot.git"
+  },
+  "author": "GustavoRFS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GustavoRFS/Aviator-Bot/issues"
+  },
+  "homepage": "https://github.com/GustavoRFS/Aviator-Bot#readme",
+  "dependencies": {
+    "@types/puppeteer": "^5.4.6",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.5.0",
+    "puppeteer": "^15.5.0",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.0",
+    "ts-node": "^10.9.1"
+  }
+}
