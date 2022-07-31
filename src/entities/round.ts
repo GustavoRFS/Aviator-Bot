@@ -1,11 +1,12 @@
 import { Schema, model } from "mongoose";
+import { IEntity } from "../interfaces/IEntity";
 
-interface IBet {
+export interface IBet {
   bet?: number;
   betResult?: number;
 }
 
-interface IRound {
+export interface IRound extends IEntity {
   date: Date;
   od: number;
   earns: Array<IBet>;
@@ -22,10 +23,15 @@ const RoundSchema = new Schema<IRound>({
     required: true,
   },
   earns: {
-    type: Array<IBet>,
+    type: [
+      {
+        bet: Number,
+        betResult: Number,
+      },
+    ],
     required: true,
     default: [],
   },
 });
 
-export default model<IRound>("Round", RoundSchema);
+export const RoundModel = model<IRound>("Round", RoundSchema);
